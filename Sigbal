@@ -1,0 +1,18 @@
+Signal ŠUM
+a=[zeros(1,400) ones(1,200) zeros(1,600) ones(1,200) zeros(1,201)];
+t=0:0.01:16;
+subplot(321) 
+plot(t,a),title('Digitalni signal') 
+n=[zeros(1,200) rand(1,1401)];
+subplot(323)
+plot(t,n+a),title('Digitalni signal sa korisni signal(šum)');
+n1=rand(1,1601);
+subplot(325)
+plot(t,n1+a),title('Digitalni signal sa AWGN')
+x=sin(t);
+subplot(322)
+plot(t,x),title('Analogni signal') 
+subplot(324)
+plot(t,n+x),title('Analogni signal sa korisni signal(šum)') 
+subplot(326)
+plot(t,n1+x),title('Analogni signal sa AWGN') 
